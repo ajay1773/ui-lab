@@ -17,3 +17,10 @@
 ## Verdict: I checked this website and I found that the header or the sub hero section part is using a shade of the primary yellow color in the background
 3. https://www.privy.io/?ref=land-book.com
 ## Verdict: I checked this website and the primary color on this was the purple color. The background color has a really light shade of that but that fits in properly and most subtaly
+
+
+# Rule: The border of a element in the dark theme should be always lighter then the background of the actual element and the background colour of its container as well
+
+# Websites I visited
+1. https://replicas.dev/enterprise
+## Verdict: I checked the enterprise page on this and the testimonial card in that page follows this pattern

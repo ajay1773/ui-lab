@@ -1,37 +1,22 @@
+import { NavLink, Route, Routes } from 'react-router-dom'
 import './App.css'
-import { rules } from './rules'
+import RulesPage from './pages/RulesPage'
+import TypographyPage from './pages/TypographyPage'
 
 function App() {
   return (
     <main className="lab">
-      <header className="lab-header">
-        <h1>UI Up</h1>
-        <p>One rule per row. Left is before applying it, right is after.</p>
-      </header>
+      <nav className="lab-nav" aria-label="Lab sections">
+        <NavLink to="/" end>
+          Rules
+        </NavLink>
+        <NavLink to="/typography">Typography</NavLink>
+      </nav>
 
-      <div className="lab-columns" aria-hidden="true">
-        <span>Before</span>
-        <span>After</span>
-      </div>
-
-      {rules.map((rule) => (
-        <section className="rule" key={rule.id} aria-labelledby={`${rule.id}-title`}>
-          <h2 id={`${rule.id}-title`}>{rule.title}</h2>
-          {rule.description && <p className="rule-description">{rule.description}</p>}
-
-          <div className="rule-panes">
-            <div className="pane">
-              <span className="pane-label">Before</span>
-              {rule.before}
-            </div>
-            <hr className="rule-divider" />
-            <div className="pane">
-              <span className="pane-label">After</span>
-              {rule.after}
-            </div>
-          </div>
-        </section>
-      ))}
+      <Routes>
+        <Route path="/" element={<RulesPage />} />
+        <Route path="/typography" element={<TypographyPage />} />
+      </Routes>
     </main>
   )
 }
